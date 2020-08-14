@@ -750,6 +750,7 @@
             if(this.closeIcon){
                 if(this.closeIconClass){
                     // user requires a custom class.
+                    this.closeIconClass = this.closeIconClass.replace('"', '');
                     var closeHtml = '<i class="' + this.closeIconClass + '"></i>';
                     this.$closeIcon.html(closeHtml);
                 }
@@ -831,6 +832,7 @@
             if(this.isAjaxLoading && !force)
                 return;
 
+            this.icon = this.icon.replace('"', '');
             this.$icon.html(this.icon ? '<i class="' + this.icon + '"></i>' : '');
             this.updateTitleContainer();
         },
